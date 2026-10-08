@@ -195,11 +195,12 @@
 
   <script>
 (function () {
-    <script>
+
+<script>
 (function () {
     function scaleCaptivate() {
-        const project = document.getElementById("CPProject");
-        if (!project) return;
+        const app = document.getElementById("app");
+        if (!app) return;
 
         const designWidth = 1920;
         const designHeight = 1080;
@@ -209,10 +210,10 @@
             window.innerHeight / designHeight
         );
 
-        project.style.width = designWidth + "px";
-        project.style.height = designHeight + "px";
-        project.style.transformOrigin = "top left";
-        project.style.transform = "scale(" + scale + ")";
+        app.style.width = designWidth + "px";
+        app.style.height = designHeight + "px";
+        app.style.transform = "scale(" + scale + ")";
+        app.style.transformOrigin = "top left";
     }
 
     window.addEventListener("load", scaleCaptivate);
@@ -220,5 +221,6 @@
     scaleCaptivate();
 })();
 </script>
+
   </body>
 </html>
