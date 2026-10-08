@@ -193,6 +193,30 @@
 <img src="dr/0552.png" width="1" height="1" style="position:absolute;left:-9999px;" alt="" />
 <img src="dr/0566.png" width="1" height="1" style="position:absolute;left:-9999px;" alt="" />
 
-    
+  <script>
+(function () {
+    function scaleCaptivate() {
+        const app = document.getElementById("app");
+        if (!app) return;
+
+        const designWidth = 1920;
+        const designHeight = 1080;
+
+        const scale = Math.min(
+            window.innerWidth / designWidth,
+            window.innerHeight / designHeight
+        );
+
+        app.style.width = designWidth + "px";
+        app.style.height = designHeight + "px";
+        app.style.transform = "scale(" + scale + ")";
+        app.style.transformOrigin = "top left";
+    }
+
+    window.addEventListener("load", scaleCaptivate);
+    window.addEventListener("resize", scaleCaptivate);
+    scaleCaptivate();
+})();
+</script>  
   </body>
 </html>
